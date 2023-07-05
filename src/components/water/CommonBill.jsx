@@ -46,7 +46,7 @@ const CommonBill = () => {
                 />
               </div>
               <div className="flex flex-col gap-2 text-xl justify-center items-start">
-                <label className="font-semibold">Total Users</label>
+                <label className="font-semibold">Total Tenant</label>
                 <span
                   className="h-10 rounded-lg p-2"
                   name="totUser"
