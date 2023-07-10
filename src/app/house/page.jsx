@@ -1,12 +1,12 @@
-import AddHouse from "@/components/house/AddHouse";
-import React from "react";
+import View from '@/components/table/View'
+import React from 'react'
 
 const page = () => {
   return (
     <>
-      <AddHouse />
+      <View/>
     </>
-  );
-};
+  )
+}
 
-export default page;
+export default page

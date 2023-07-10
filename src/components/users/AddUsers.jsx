@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
 import { Field, Formik, Form, ErrorMessage } from "formik";
+import { AiFillCloseCircle } from "react-icons/ai";
 import { useUser } from "./hook/useUser";
 
-const AddUsers = () => {
+const AddUsers = ({ open, close }) => {
   const { initialValues, handleSubmit, schema } = useUser();
-
+  if (!open) return null;
   return (
     <>
       <Formik
@@ -14,7 +15,14 @@ const AddUsers = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          <div className="flex justify-center items-center p-16">
+          {/* <div className="flex justify-center items-center p-16"> */}
+          <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex flex-col p-3 items-center justify-center">
+          <div className="relative">
+              <AiFillCloseCircle
+                className="text-2xl absolute mt-2 left-40 cursor-pointer"
+                onClick={close}
+              />
+            </div>
             <div className="bg-red-300 flex flex-col p-8 gap-6 justify-center items-start rounded-2xl">
               <h1 className="font-extrabold text-3xl">Add Tenant</h1>
               <div className="flex flex-col gap-2 text-xl justify-center items-start">

@@ -15,4 +15,5 @@ export const houseSchema = Yup.object().shape({
   totAmt: Yup.number()
     .typeError("Enter Digits Only!")
     .required("Total Amount  Required !"),
+  month: Yup.string().required("Month  Required !"),
 });
