@@ -16,8 +16,8 @@ const AddUsers = ({ open, close }) => {
       >
         <Form>
           {/* <div className="flex justify-center items-center p-16"> */}
-          <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex flex-col p-3 items-center justify-center">
-          <div className="relative">
+          <div className="fixed inset-0 backdrop-blur flex flex-col p-3 items-center justify-center">
+            <div className="relative">
               <AiFillCloseCircle
                 className="text-2xl absolute mt-2 left-40 cursor-pointer"
                 onClick={close}
